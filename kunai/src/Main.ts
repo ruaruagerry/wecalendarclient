@@ -36,7 +36,7 @@ class Main extends eui.UILayer {
     private lastindex = 0;
     private arrayCollection: eui.ArrayCollection;
     private data: Data = null
-    // private calendar: Calendar = null
+    private divination: Divination = null
     private wallet: Wallet = null
     private setup: Setup = null
     public static userinfo: any
@@ -180,8 +180,8 @@ class Main extends eui.UILayer {
                     this.viewStack.addChild(this.data)
                     break
                 case 1:
-                    // this.calendar = new Calendar()
-                    // this.viewStack.addChild(this.calendar)
+                    this.divination = new Divination()
+                    this.viewStack.addChild(this.divination)
                     break
                 case 2:
                     this.wallet = new Wallet()
