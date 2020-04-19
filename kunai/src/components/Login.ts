@@ -12,8 +12,10 @@ class Login extends eui.ItemRenderer {
     private init() {
         // 创建场景
         this.createScene()
-        // 创建微信透明按钮
-        this.createWxbtn()
+        if (!debug) {
+            // 创建微信透明按钮
+            this.createWxbtn()
+        }
     }
 
     private createScene() {

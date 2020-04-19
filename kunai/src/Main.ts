@@ -36,7 +36,7 @@ class Main extends eui.UILayer {
     private lastindex = 0;
     private arrayCollection: eui.ArrayCollection;
     private data: Data = null
-    private game: Game = null
+    // private calendar: Calendar = null
     private wallet: Wallet = null
     private setup: Setup = null
     public static userinfo: any
@@ -144,7 +144,7 @@ class Main extends eui.UILayer {
                 img_sel_res: "data_png",
             },
             {
-                img_text: "游 戏",
+                img_text: "日 历",
                 selected: true,
                 img_sel_res: "game_png",
             },
@@ -180,8 +180,8 @@ class Main extends eui.UILayer {
                     this.viewStack.addChild(this.data)
                     break
                 case 1:
-                    this.game = new Game()
-                    this.viewStack.addChild(this.game)
+                    // this.calendar = new Calendar()
+                    // this.viewStack.addChild(this.calendar)
                     break
                 case 2:
                     this.wallet = new Wallet()
