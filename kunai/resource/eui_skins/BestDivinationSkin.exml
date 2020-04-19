@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin width="358" height="622" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect anchorOffsetX="0" anchorOffsetY="0" fillColor="0xD8D8D8" top="121" verticalCenter="62.5" bottom="-4" left="0" horizontalCenter="0" right="0"/>
+	<e:Scroller height="275" width="244.66" horizontalCenter="-2.5" anchorOffsetX="0" verticalCenter="13.5">
+		<e:viewport>
+		<e:Label id="content" text="阿萨德法师" anchorOffsetX="0" width="86" anchorOffsetY="0" height="153" verticalCenter="0" horizontalCenter="4.170000000000002" size="18" fontFamily="KaiTi" verticalAlign="justify" textAlign="left" textColor="0x000000"/>
+		</e:viewport>
+	</e:Scroller>
+	<e:Label id="name" text="阿斯蒂芬：" size="20" verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei" textColor="0x53FF00" anchorOffsetX="0" width="147.66" anchorOffsetY="0" height="43" top="133" left="42"/>
+	<e:Rect anchorOffsetX="0" anchorOffsetY="0" fillColor="0x45828E" height="121" left="0" right="-2" horizontalCenter="1" top="0"/>
+	<e:Label text="昨日最佳吐槽" anchorOffsetX="0" anchorOffsetY="0" verticalAlign="middle" textAlign="center" size="21" fontFamily="SimHei" height="35" top="44" left="99" right="97" horizontalCenter="1"/>
+	<e:Image id="back" width="31" height="31" anchorOffsetX="0" anchorOffsetY="0" source="back_png" top="46" left="19"/>
+	<e:Label text="沙发" anchorOffsetX="0" width="244.66" anchorOffsetY="0" height="110" size="20" bottom="28" horizontalCenter="-2.5"/>
+</e:Skin>

@@ -10,7 +10,7 @@
 		"libs/egretad/bin/egretad.js"
 	],
 	"game": [
-		"bin-debug/containers/setup/Logout.js",
+		"bin-debug/containers/divination/PublicDivination.js",
 		"bin-debug/Main.js",
 		"bin-debug/components/Buttons.js",
 		"bin-debug/components/Dialog.js",
@@ -23,9 +23,10 @@
 		"bin-debug/components/TimberMask.js",
 		"bin-debug/components/TimberMaskSprite.js",
 		"bin-debug/containers/data/Data.js",
+		"bin-debug/containers/divination/BestDivination.js",
 		"bin-debug/containers/divination/Divination.js",
-		"bin-debug/containers/divination/PublicDivination.js",
 		"bin-debug/api/api.js",
+		"bin-debug/containers/setup/Logout.js",
 		"bin-debug/containers/setup/ModifyPhone.js",
 		"bin-debug/containers/setup/Phone.js",
 		"bin-debug/containers/setup/Real.js",

@@ -5,11 +5,14 @@ class Divination extends eui.ItemRenderer {
     private front: eui.Image
     private imageback: eui.Image
     private switchbtn: eui.Button
-    private bestbtn: eui.Button
+
     private rankbtn: eui.Button
 
     private publicdivination: PublicDivination
     private publicbtn: eui.Button
+
+    private bestdivination: BestDivination
+    private bestbtn: eui.Button
 
     private isclose: boolean = true
 
@@ -35,22 +38,17 @@ class Divination extends eui.ItemRenderer {
             this.onDraw()
         }, this)
 
-        this.publicbtn.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
-            this.onPublicDivination()
-        }, this)
+        this.publicbtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onPublicDivination, this)
 
         this.rankbtn.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
 
         }, this)
 
-        this.bestbtn.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
-            this.bestDivination()
-        }, this)
+        this.bestbtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onBestDivination, this)
     }
 
     private onDraw() {
         this.switchbtn.enabled = false
-        this.bestbtn.enabled = false
         if (this.isclose) {
             this.openDivination()
         } else {
@@ -87,24 +85,18 @@ class Divination extends eui.ItemRenderer {
             this.switchbtn.label = "翻吐槽"
             egret.setTimeout(() => {
                 this.switchbtn.enabled = true
-                this.bestbtn.enabled = true
             }, this, 1000, "egret");
         })
     }
 
-    private bestDivination() {
-        this.bestbtn.enabled = false
-        this.switchbtn.enabled = false
-
-        if (this.isclose) {
-            this.openDivination()
-        } else {
-            Msg.showMsg(this, "先关闭当前牌")
-        }
-    }
 
     private onPublicDivination() {
         this.publicdivination = new PublicDivination()
         this.addChild(this.publicdivination)
+    }
+
+    private onBestDivination() {
+        this.bestdivination = new BestDivination()
+        this.addChild(this.bestdivination)
     }
 }

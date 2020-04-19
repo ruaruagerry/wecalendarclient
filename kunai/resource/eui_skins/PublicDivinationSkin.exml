@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin width="358" height="622" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Rect anchorOffsetX="0" anchorOffsetY="0" fillColor="0xD8D8D8" top="121" verticalCenter="60.5" bottom="0" left="0" horizontalCenter="0" right="0"/>
+	<e:Rect anchorOffsetX="0" anchorOffsetY="0" fillColor="0xD8D8D8" top="121" verticalCenter="62.5" bottom="-4" left="0" horizontalCenter="0" right="0"/>
 	<e:Rect anchorOffsetX="0" anchorOffsetY="0" fillColor="0x45828E" height="121" left="0" right="-2" horizontalCenter="1" top="0"/>
 	<e:Rect anchorOffsetX="0" anchorOffsetY="0" fillColor="0xFFFFFF" top="151" left="34" horizontalCenter="0.5" right="33" verticalCenter="31.5" bottom="88"/>
 	<e:Rect width="276.06" height="312.42" anchorOffsetX="0" anchorOffsetY="0" fillColor="0x939393" verticalCenter="4" horizontalCenter="0"/>
