@@ -25,6 +25,7 @@
 		"bin-debug/containers/data/Data.js",
 		"bin-debug/containers/divination/BestDivination.js",
 		"bin-debug/containers/divination/Divination.js",
+		"bin-debug/containers/divination/DivinationRank.js",
 		"bin-debug/api/api.js",
 		"bin-debug/containers/setup/Logout.js",
 		"bin-debug/containers/setup/ModifyPhone.js",

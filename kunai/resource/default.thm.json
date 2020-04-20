@@ -22,6 +22,8 @@
 		"resource/eui_skins/ButtonSkin.exml",
 		"resource/eui_skins/CheckBoxSkin.exml",
 		"resource/eui_skins/DataSkin.exml",
+		"resource/eui_skins/DivinationRankItemSkin.exml",
+		"resource/eui_skins/DivinationRankSkin.exml",
 		"resource/eui_skins/DivinationSkin.exml",
 		"resource/eui_skins/GetoutRecordItemSkin.exml",
 		"resource/eui_skins/GetoutRecordSkin.exml",

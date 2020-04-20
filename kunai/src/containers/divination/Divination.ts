@@ -6,7 +6,10 @@ class Divination extends eui.ItemRenderer {
     private imageback: eui.Image
     private switchbtn: eui.Button
 
+    private divinationrank: DivinationRank
     private rankbtn: eui.Button
+    private isshowrank: boolean
+    private rankshape: egret.Shape
 
     private publicdivination: PublicDivination
     private publicbtn: eui.Button
@@ -34,16 +37,9 @@ class Divination extends eui.ItemRenderer {
         this.width = stage.stageWidth
         this.height = stage.stageHeight - 90
 
-        this.switchbtn.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
-            this.onDraw()
-        }, this)
-
+        this.switchbtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onDraw, this)
         this.publicbtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onPublicDivination, this)
-
-        this.rankbtn.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
-
-        }, this)
-
+        this.rankbtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onDivinationRank, this)
         this.bestbtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onBestDivination, this)
     }
 
@@ -98,5 +94,36 @@ class Divination extends eui.ItemRenderer {
     private onBestDivination() {
         this.bestdivination = new BestDivination()
         this.addChild(this.bestdivination)
+    }
+
+    private onDivinationRank() {
+        if (this.isshowrank) {
+            return
+        }
+        this.createClickable()
+        this.divinationrank = new DivinationRank()
+        // this.divinationrank.x = this.imageback.x
+        // this.divinationrank.y = this.imageback.y
+        this.addChild(this.divinationrank)
+        this.isshowrank = true
+    }
+
+    private createClickable() {
+        const { stage } = egret.MainContext.instance
+        this.rankshape = new egret.Shape()
+        this.rankshape.graphics.beginFill(0x000000, 0)
+        this.rankshape.graphics.drawRect(0, 0, stage.stageWidth, stage.stageHeight - 90)
+        this.rankshape.graphics.endFill()
+        this.addChild(this.rankshape)
+        this.rankshape.touchEnabled = true
+        this.rankshape.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onDeleteRank, this)
+    }
+
+    private onDeleteRank() {
+        if (this.isshowrank) {
+            this.removeChild(this.divinationrank)
+            this.removeChild(this.rankshape)
+            this.isshowrank = false
+        }
     }
 }

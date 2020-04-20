@@ -4,7 +4,7 @@
 
 	<e:Button id="bestbtn" label="昨日最佳" anchorOffsetX="0" top="26" left="16" width="96.33" anchorOffsetY="0" height="46.67"/>
 	<e:Button id="publicbtn" label="我要吐槽" anchorOffsetX="0" width="100" top="26" anchorOffsetY="0" height="46.67" horizontalCenter="-1"/>
-	<e:Button id="rankbtn" label="排行榜" anchorOffsetX="0" width="100" right="14" top="26" anchorOffsetY="0" height="46.67"/>
+	<e:Button id="rankbtn" label="排行榜" anchorOffsetX="0" width="100" right="14" top="26" anchorOffsetY="0" height="46.67" enabled="true"/>
 	<e:Image id="front" width="253.33" height="407.99" anchorOffsetX="0" anchorOffsetY="0" source="tlp_jpg" verticalCenter="31" horizontalCenter="-0.5"/>
 	<e:Rect id="frontrect" width="186" height="341.99" anchorOffsetX="0" anchorOffsetY="0" fillColor="0xbcbcbc" verticalCenter="32" horizontalCenter="0"/>
 	<e:Scroller id="content" height="275" width="186" horizontalCenter="0" y="241.31">
