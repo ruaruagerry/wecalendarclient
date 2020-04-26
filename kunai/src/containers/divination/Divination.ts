@@ -38,6 +38,9 @@ class Divination extends eui.ItemRenderer {
 
         this.width = stage.stageWidth
         this.height = stage.stageHeight - 90
+        if (Config.Ad) {
+            this.height = stage.stageHeight
+        }
 
         this.switchbtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onDraw, this)
         this.publicbtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onPublicDivination, this)

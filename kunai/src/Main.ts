@@ -221,11 +221,24 @@ class Main extends eui.UILayer {
         }
     }
 
+    private createDivination() {
+        this.divination = new Divination()
+        this.addChild(this.divination)
+    }
+
     private onLogin(evt: egret.Event) {
         Main.userinfo = evt.data.userinfo
         this.clientinfo = evt.data.clientinfo
+
+        // 配置加载
+        this.loadConfig()
+
         // 登陆
-        this.createTabbar()
+        if (Config.Ad) {
+            this.createTabbar()
+        } else {
+            this.createDivination()
+        }
         this.removeChild(this.login)
         this.removeEventListener(Login.LoginSuccess, () => { }, this)
     }
@@ -237,6 +250,10 @@ class Main extends eui.UILayer {
         this.initBackground()
         // 初始化登陆界面
         this.createLogin()
+    }
+
+    private loadConfig() {
+        Config.Ad = this.clientinfo.ad
     }
 }
 

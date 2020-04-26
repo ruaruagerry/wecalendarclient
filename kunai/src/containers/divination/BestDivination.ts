@@ -21,6 +21,9 @@ class BestDivination extends eui.ItemRenderer {
 
         this.width = stage.stageWidth
         this.height = stage.stageHeight - 90;
+        if (Config.Ad) {
+            this.height = stage.stageHeight
+        }
 
         // 增加按钮事件
         this.back.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin width="358" height="622" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<e:Rect anchorOffsetX="0" anchorOffsetY="0" fillColor="0xD8D8D8" top="121" verticalCenter="62.5" bottom="-4" left="0" horizontalCenter="0" right="0"/>
-	<e:Rect width="267.39" height="275" fillColor="0x9e9e9e" verticalCenter="37.5" horizontalCenter="-0.5"/>
-	<e:Scroller height="275" width="267.39" horizontalCenter="-0.5" anchorOffsetX="0" verticalCenter="37.5">
+	<e:Rect width="267.39" fillColor="0x9e9e9e" verticalCenter="37.5" horizontalCenter="-0.5" top="211" bottom="136"/>
+	<e:Scroller width="267.39" horizontalCenter="-0.5" anchorOffsetX="0" verticalCenter="37.5" top="211" bottom="136">
 		<e:viewport>
 		<e:Label id="content" text="" anchorOffsetX="0" width="258.3" anchorOffsetY="0" height="153" verticalCenter="0" horizontalCenter="-11.194999999999993" size="18" fontFamily="KaiTi" verticalAlign="justify" textAlign="left" textColor="0x000000"/>
 		</e:viewport>

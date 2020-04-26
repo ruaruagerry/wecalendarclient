@@ -12,6 +12,10 @@ const version = "1.0.1"
 // const rootUrl = "https://www.gerryluo.com/weagent"
 const rootUrl = "http://127.0.0.1:3001"
 
+module Config {
+    export var Ad: boolean
+}
+
 module API {
     /* ----------------- auth ---------------- */
     export var ApiAuthWxLogin = rootUrl + "/auth/wxlogin"
