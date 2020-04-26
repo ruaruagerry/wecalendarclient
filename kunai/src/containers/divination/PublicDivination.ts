@@ -23,8 +23,7 @@ class PublicDivination extends eui.ItemRenderer {
 
         this.width = stage.stageWidth
         this.height = stage.stageHeight - 90;
-
-        if (Config.Ad) {
+        if (!Config.Ad) {
             this.height = stage.stageHeight
         }
 

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin width="358" height="622" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<e:Rect anchorOffsetX="0" anchorOffsetY="0" fillColor="0xD8D8D8" top="121" verticalCenter="62.5" bottom="-4" left="0" horizontalCenter="0" right="0"/>
-	<e:Rect width="267.39" fillColor="0x9e9e9e" verticalCenter="37.5" horizontalCenter="-0.5" top="211" bottom="136"/>
-	<e:Scroller width="267.39" horizontalCenter="-0.5" anchorOffsetX="0" verticalCenter="37.5" top="211" bottom="136">
+	<e:Rect fillColor="0x9e9e9e" verticalCenter="20" top="211" bottom="171" left="18" horizontalCenter="0" right="18" height="243" anchorOffsetY="0"/>
+	<e:Scroller horizontalCenter="0" anchorOffsetX="0" verticalCenter="20" top="211" bottom="171" left="18" right="18" anchorOffsetY="0">
 		<e:viewport>
-		<e:Label id="content" text="" anchorOffsetX="0" width="258.3" anchorOffsetY="0" height="153" verticalCenter="0" horizontalCenter="-11.194999999999993" size="18" fontFamily="KaiTi" verticalAlign="justify" textAlign="left" textColor="0x000000"/>
+		<e:Label id="content" text="" anchorOffsetX="0" width="294.66" anchorOffsetY="0" height="153" verticalCenter="0" horizontalCenter="2" size="18" fontFamily="KaiTi" verticalAlign="justify" textAlign="left" textColor="0x000000"/>
 		</e:viewport>
 	</e:Scroller>
-	<e:Label id="nickname" text="" size="20" verticalAlign="middle" textAlign="left" fontFamily="Microsoft YaHei" anchorOffsetX="0" width="129.48" anchorOffsetY="0" height="43" top="144" horizontalCenter="19.5" textColor="0xfdff00"/>
+	<e:Label id="nickname" text="" size="20" verticalAlign="middle" textAlign="left" fontFamily="Microsoft YaHei" anchorOffsetX="0" width="129.48" anchorOffsetY="0" height="43" top="144" textColor="0xfdff00" left="100"/>
 	<e:Rect anchorOffsetX="0" anchorOffsetY="0" fillColor="0x45828E" height="121" left="0" right="-2" horizontalCenter="1" top="0"/>
 	<e:Label text="昨日最佳吐槽" anchorOffsetX="0" anchorOffsetY="0" verticalAlign="middle" textAlign="center" size="21" fontFamily="SimHei" height="35" top="44" left="99" right="97" horizontalCenter="1"/>
 	<e:Image id="back" width="31" height="31" anchorOffsetX="0" anchorOffsetY="0" source="back_png" top="46" left="19"/>
-	<e:Label text="沙发" anchorOffsetX="0" width="293.66" anchorOffsetY="0" height="90.3" size="20" bottom="26" horizontalCenter="2"/>
-	<e:Image id="portrait" width="71.51" height="63.94" anchorOffsetX="0" anchorOffsetY="0" top="132" horizontalCenter="-96"/>
+	<e:Label text="友情提示：\n1.吐槽越多获选最佳吐槽概率越大。\n2.关注公众号《吐槽卡罗牌》更容易被选为昨日最佳吐槽。\n2.获得昨日最佳吐槽的小伙伴，可去微信公众号《吐槽卡罗牌》领取10元红包哦！\n" anchorOffsetX="0" width="293.66" anchorOffsetY="0" height="135.75" size="18" bottom="18" horizontalCenter="0" fontFamily="KaiTi" textColor="0xffffff"/>
+	<e:Image id="portrait" width="71.51" height="63.94" anchorOffsetX="0" anchorOffsetY="0" top="132" left="18"/>
 </e:Skin>

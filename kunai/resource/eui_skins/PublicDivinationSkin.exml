@@ -2,11 +2,12 @@
 <e:Skin width="358" height="622" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<e:Rect anchorOffsetX="0" anchorOffsetY="0" fillColor="0xD8D8D8" top="121" verticalCenter="62.5" bottom="-4" left="0" horizontalCenter="0" right="0"/>
 	<e:Rect anchorOffsetX="0" anchorOffsetY="0" fillColor="0x45828E" height="121" left="0" right="-2" horizontalCenter="1" top="0"/>
-	<e:Rect anchorOffsetX="0" anchorOffsetY="0" fillColor="0xFFFFFF" top="151" left="34" horizontalCenter="0.5" right="33" verticalCenter="31.5" bottom="88"/>
-	<e:Rect width="276.06" height="312.42" anchorOffsetX="0" anchorOffsetY="0" fillColor="0x939393" verticalCenter="4" horizontalCenter="0"/>
+	<e:Rect anchorOffsetX="0" anchorOffsetY="0" fillColor="0xFFFFFF" horizontalCenter="1.5" verticalCenter="20.5" height="388.67" width="315"/>
+	<e:Rect width="276.06" height="288.42" anchorOffsetX="0" anchorOffsetY="0" fillColor="0x939393" verticalCenter="16" horizontalCenter="0"/>
 	<e:Label text="发布吐槽" anchorOffsetX="0" anchorOffsetY="0" verticalAlign="middle" textAlign="center" size="21" fontFamily="SimHei" height="35" top="44" left="99" right="97" horizontalCenter="1"/>
 	<e:Image id="back" width="31" height="31" anchorOffsetX="0" anchorOffsetY="0" source="back_png" top="46" left="19"/>
 	<e:Button id="publicbtn" label="吐槽" horizontalCenter="0" bottom="25"/>
 	<e:CheckBox id="noname" label="匿名" bottom="114" horizontalCenter="0.5"/>
-	<e:EditableText id="divination" width="265.15" height="300" text="" anchorOffsetX="0" anchorOffsetY="0" verticalAlign="justify" textAlign="left" multiline="true" verticalCenter="4" horizontalCenter="0.5" textColor="0x000000" size="20" fontFamily="KaiTi"/>
+	<e:EditableText id="divination" text="" anchorOffsetX="0" anchorOffsetY="0" verticalAlign="justify" textAlign="left" multiline="true" verticalCenter="16.5" horizontalCenter="0.5" textColor="0x000000" size="20" fontFamily="KaiTi" height="275" width="265"/>
+	<e:Label text="请输入吐槽内容：" textColor="0x000000" fontFamily="KaiTi" size="18" verticalAlign="middle" textAlign="center" top="152" left="41" horizontalCenter="-66" verticalCenter="-150"/>
 </e:Skin>

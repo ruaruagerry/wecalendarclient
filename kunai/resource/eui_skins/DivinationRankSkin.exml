@@ -3,11 +3,18 @@
 	<e:Rect anchorOffsetX="0" anchorOffsetY="0" verticalCenter="82" bottom="41" left="32" horizontalCenter="-0.5" right="33" top="205"/>
 	<e:Rect height="64" fillColor="0xE25D5D" anchorOffsetX="0" anchorOffsetY="0" top="141" left="33" horizontalCenter="-0.5" right="34"/>
 	<e:Rect height="87.99" anchorOffsetX="0" anchorOffsetY="0" top="53" left="33" horizontalCenter="-0.5" right="34"/>
-	<e:Label text="昵称" anchorOffsetY="0" height="64" verticalAlign="middle" textAlign="center" size="17" anchorOffsetX="0" width="88" bold="true" top="141" left="86"/>
-	<e:Label text="吐槽数" anchorOffsetY="0" height="64" verticalAlign="middle" textAlign="center" size="17" anchorOffsetX="0" width="76.99" bold="true" top="141" right="35"/>
-	<e:Label text="头像" anchorOffsetY="0" height="64" verticalAlign="middle" textAlign="center" size="17" anchorOffsetX="0" width="72" bold="true" horizontalCenter="31" top="141"/>
+
+
+
 	<e:Label text="吐槽排行榜" anchorOffsetX="0" width="135" anchorOffsetY="0" height="43" verticalAlign="middle" textAlign="center" horizontalCenter="-0.5" top="67"/>
 	<e:List id="dataList" anchorOffsetX="0" anchorOffsetY="0" height="376.34" bottom="42" verticalCenter="81" left="33" horizontalCenter="-0.5" right="34"/>
 	<e:Label text="每日榜首玩家关注《吐槽卡罗牌》公众号可领取5元红包" anchorOffsetX="0" width="263.33" anchorOffsetY="0" height="23.33" verticalAlign="middle" textAlign="center" size="10" horizontalCenter="0.5" top="113"/>
-	<e:Label text="排名" anchorOffsetY="0" height="65" anchorOffsetX="0" width="53" size="17" verticalAlign="middle" textAlign="center" bold="true" top="141" left="33"/>
+	<e:Label text="名字" anchorOffsetY="0" height="64" verticalAlign="middle" textAlign="center" size="17" anchorOffsetX="0" bold="true" fontFamily="KaiTi" width="80.5" top="141" left="92"/>
+	<e:Label text="吐槽数" anchorOffsetY="0" height="64" verticalAlign="middle" textAlign="center" size="17" anchorOffsetX="0" width="73.99" bold="true" fontFamily="KaiTi" right="35" top="141"/>
+	<e:Label text="头像" anchorOffsetY="0" height="64" verticalAlign="middle" textAlign="center" size="17" anchorOffsetX="0" bold="true" fontFamily="KaiTi" width="78.64" horizontalCenter="29.5" top="141" left="169"/>
+	<e:Label text="排名" anchorOffsetY="0" height="64" anchorOffsetX="0" width="50" size="17" verticalAlign="middle" textAlign="center" bold="true" fontFamily="KaiTi" top="141" left="34"/>
+	<e:Rect width="3" height="65" anchorOffsetY="0" anchorOffsetX="0" top="141" left="83"/>
+	<e:Rect width="3" height="65" anchorOffsetY="0" anchorOffsetX="0" top="141" left="154" horizontalCenter="-23.5"/>
+	<e:Rect width="3" height="65" anchorOffsetY="0" anchorOffsetX="0" right="93" top="141" horizontalCenter="84.5"/>
+
 </e:Skin>

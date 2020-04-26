@@ -234,6 +234,7 @@ class Main extends eui.UILayer {
         this.loadConfig()
 
         // 登陆
+        console.log("Config.Ad:", Config.Ad)
         if (Config.Ad) {
             this.createTabbar()
         } else {
