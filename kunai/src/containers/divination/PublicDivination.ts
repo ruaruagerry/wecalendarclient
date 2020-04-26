@@ -4,6 +4,7 @@ class PublicDivination extends eui.ItemRenderer {
     private divination: eui.EditableText
     private publicbtn: eui.Button
     private noname: eui.CheckBox
+    private isnoname: boolean
 
     constructor() {
         super()
@@ -31,6 +32,14 @@ class PublicDivination extends eui.ItemRenderer {
         this.publicbtn.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
             this.onPublicDivination()
         }, this)
+
+        this.noname.addEventListener(
+            eui.UIEvent.CHANGE,
+            (evt: eui.UIEvent) => {
+                egret.log(evt.target.selected);
+                this.isnoname = evt.target.selected
+            }, this
+        );
     }
 
     private delete() {
@@ -46,24 +55,15 @@ class PublicDivination extends eui.ItemRenderer {
         }
 
         console.log("text:", this.divination.text)
-        // var data = {
-        //     phone: this.phone.text,
-        //     code: this.code.text,
-        // }
-        // Http.post(this, API.ApiPhoneBind, data).then(res => {
-        //     if (res == undefined) {
-        //         Msg.showMsg(this, "绑定成功")
-        //         this.tip.text = "已绑定手机号码"
-        //         this.phone.enabled = false
-        //         this.code.text = ""
-        //         this.code.enabled = false
-        //         this.code.alpha = 0
-        //         this.getcodebtn.enabled = false
-        //         this.getcodebtn.alpha = 0
-        //         this.bindbtn.enabled = false
-        //         this.modifybindbtn.enabled = true
-        //         return
-        //     }
-        // })
+        var data = {
+            content: this.divination.text,
+            noname: this.isnoname
+        }
+        Http.post(this, API.ApiDivinationPublic, data).then(() => {
+            Msg.showMsg(this, "发布吐槽成功，一定有人会翻到哟！")
+            this.divination.text = ""
+            this.isnoname = false
+            return
+        })
     }
 }

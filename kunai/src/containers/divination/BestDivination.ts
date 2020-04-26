@@ -1,5 +1,8 @@
 class BestDivination extends eui.ItemRenderer {
     private back: eui.Image
+    private nickname: eui.Label
+    private content: eui.Label
+    private portrait: eui.Image
 
     constructor() {
         super()
@@ -9,8 +12,6 @@ class BestDivination extends eui.ItemRenderer {
     private init() {
         // 创建场景
         this.createScene()
-        // 加载数据
-        this.loadData()
     }
 
     private createScene() {
@@ -33,25 +34,18 @@ class BestDivination extends eui.ItemRenderer {
         }
     }
 
-    private loadData() {
-        // var data = {
-        //     phone: this.phone.text,
-        //     code: this.code.text,
-        // }
-        // Http.post(this, API.ApiPhoneBind, data).then(res => {
-        //     if (res == undefined) {
-        //         Msg.showMsg(this, "绑定成功")
-        //         this.tip.text = "已绑定手机号码"
-        //         this.phone.enabled = false
-        //         this.code.text = ""
-        //         this.code.enabled = false
-        //         this.code.alpha = 0
-        //         this.getcodebtn.enabled = false
-        //         this.getcodebtn.alpha = 0
-        //         this.bindbtn.enabled = false
-        //         this.modifybindbtn.enabled = true
-        //         return
-        //     }
-        // })
+    public loadData(data: any) {
+        this.nickname.text = data.nickname
+        this.content.text = data.content
+        // 加载头像
+        const imgLoader = new egret.ImageLoader()
+        imgLoader.load(data.portrait)
+        imgLoader.once(egret.Event.COMPLETE, (e: egret.Event) => {
+            if (e.currentTarget.data) {
+                const texture = new egret.Texture()
+                texture.bitmapData = e.currentTarget.data
+                this.portrait.texture = texture
+            }
+        }, this)
     }
 }

@@ -13,7 +13,6 @@
 		"bin-debug/containers/divination/PublicDivination.js",
 		"bin-debug/Main.js",
 		"bin-debug/components/Buttons.js",
-		"bin-debug/components/Dialog.js",
 		"bin-debug/components/Loading.js",
 		"bin-debug/components/Login.js",
 		"bin-debug/components/Msg.js",

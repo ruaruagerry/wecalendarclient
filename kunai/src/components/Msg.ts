@@ -21,6 +21,7 @@ class Msg extends egret.Sprite {
         Msg.shape.graphics.drawRect(0, -100, obj.width, 100)
         Msg.shape.graphics.endFill()
         obj.addChild(Msg.shape)
+        obj.touchChildren = false
         egret.Tween.get(Msg.shape).to({ y: 100 }, 100, egret.Ease.bounceOut).call(() => {
             setTimeout(() => {
                 obj.removeChild(Msg.shape)
@@ -33,6 +34,7 @@ class Msg extends egret.Sprite {
         obj.addChild(Msg.showtext)
         egret.Tween.get(Msg.showtext).to({ y: 100 / 2 - Msg.showtext.height / 2 }, 100, egret.Ease.bounceOut).call(() => {
             setTimeout(() => {
+                obj.touchChildren = true
                 obj.removeChild(Msg.showtext)
             }, 3000)
         }, this)

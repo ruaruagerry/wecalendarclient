@@ -38,9 +38,9 @@ module API {
     /* ----------------- data ---------------- */
     export var ApiDataEntrance = rootUrl + "/data/entrance"
 
-    /* ----------------- game ---------------- */
-    export var ApiGameRebirthUse = rootUrl + "/game/rebirth/use"
-    export var ApiGameScoreUpdate = rootUrl + "/game/score/update"
-    export var ApiGameScoreRank = rootUrl + "/game/score/rank"
-
+    /* ----------------- divination ---------------- */
+    export var ApiDivinationPublic = rootUrl + "/divination/public"
+    export var ApiDivinationGet = rootUrl + "/divination/get"
+    export var ApiDivinationRank = rootUrl + "/divination/rank"
+    export var ApiDivinationBest = rootUrl + "/divination/best"
 }

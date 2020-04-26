@@ -12,7 +12,8 @@
 		<e:Label id="frontlabel" text="" anchorOffsetX="0" width="86" anchorOffsetY="0" height="153" verticalCenter="230" horizontalCenter="-538" size="18" fontFamily="KaiTi" verticalAlign="justify" textAlign="left" textColor="0x000000"/>
 		</e:viewport>
 	</e:Scroller>
-	<e:Label id="frontname" text="" size="19" verticalAlign="middle" textAlign="left" fontFamily="Microsoft YaHei" textColor="0x53ff00" anchorOffsetX="0" width="79.67" anchorOffsetY="0" height="35" horizontalCenter="-41" top="190"/>
+	<e:Label id="frontname" text="" size="19" verticalAlign="middle" textAlign="left" fontFamily="Microsoft YaHei" textColor="0x53ff00" anchorOffsetX="0" width="79.67" anchorOffsetY="0" height="35" horizontalCenter="10" top="194"/>
+	<e:Image id="frontportrait" width="46" height="42" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="-61" top="187"/>
 
 
 

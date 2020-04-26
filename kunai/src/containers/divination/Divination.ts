@@ -2,7 +2,9 @@ class Divination extends eui.ItemRenderer {
     private frontlabel: eui.Label
     private frontrect: eui.Rect
     private frontname: eui.Label
+    private frontportrait: eui.Image
     private front: eui.Image
+
     private imageback: eui.Image
     private switchbtn: eui.Button
 
@@ -43,45 +45,68 @@ class Divination extends eui.ItemRenderer {
         this.bestbtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onBestDivination, this)
     }
 
-    private onDraw() {
+    private async onDraw() {
         this.switchbtn.enabled = false
         if (this.isclose) {
-            this.openDivination()
+            Http.get(this, API.ApiDivinationGet).then((res) => {
+                // unknown转any
+                var rsp: any = res
+                console.log("rsp:", rsp)
+
+                // 加载数据
+                this.frontlabel.text = rsp.content
+                this.frontname.text = rsp.nickname
+                // 加载头像
+                const imgLoader = new egret.ImageLoader()
+                imgLoader.load(rsp.portrait)
+                imgLoader.once(egret.Event.COMPLETE, (e: egret.Event) => {
+                    if (e.currentTarget.data) {
+                        const texture = new egret.Texture()
+                        texture.bitmapData = e.currentTarget.data
+                        this.frontportrait.texture = texture
+                    }
+                }, this)
+
+                // 翻牌
+                this.openDivination()
+            })
         } else {
             this.closeDivination()
         }
+
+        egret.setTimeout(() => {
+            this.switchbtn.enabled = true
+        }, this, 5000, "egret");
     }
 
     private openDivination() {
+        // 翻牌效果
         this.imageback.scaleX = 1;
         this.frontlabel.scaleX = 0;
         this.frontrect.scaleX = 0;
         this.frontname.scaleX = 0;
+        this.frontportrait.scaleX = 0;
         this.front.scaleX = 0;
         egret.Tween.get(this.imageback).to({ scaleX: 0 }, 3000, egret.Ease.backIn).call(() => {
             egret.Tween.get(this.frontlabel).to({ scaleX: 1 }, 3000, egret.Ease.backOut);
             egret.Tween.get(this.frontrect).to({ scaleX: 1 }, 3000, egret.Ease.backOut);
             egret.Tween.get(this.frontname).to({ scaleX: 1 }, 3000, egret.Ease.backOut);
+            egret.Tween.get(this.frontportrait).to({ scaleX: 1 }, 3000, egret.Ease.backOut);
             egret.Tween.get(this.front).to({ scaleX: 1 }, 3000, egret.Ease.backOut);
             this.isclose = false
             this.switchbtn.label = "关闭"
-            egret.setTimeout(() => {
-                this.switchbtn.enabled = true
-            }, this, 5000, "egret");
         })
     }
 
     private closeDivination() {
         egret.Tween.get(this.frontlabel).to({ scaleX: 0 }, 1000, egret.Ease.backOut);
         egret.Tween.get(this.frontname).to({ scaleX: 0 }, 1000, egret.Ease.backOut);
+        egret.Tween.get(this.frontportrait).to({ scaleX: 0 }, 1000, egret.Ease.backOut);
         egret.Tween.get(this.frontrect).to({ scaleX: 0 }, 1000, egret.Ease.backOut);
         egret.Tween.get(this.front).to({ scaleX: 0 }, 1000, egret.Ease.backOut).call(() => {
             egret.Tween.get(this.imageback).to({ scaleX: 1 }, 1000, egret.Ease.backIn)
             this.isclose = true
             this.switchbtn.label = "翻吐槽"
-            egret.setTimeout(() => {
-                this.switchbtn.enabled = true
-            }, this, 1000, "egret");
         })
     }
 
@@ -92,8 +117,14 @@ class Divination extends eui.ItemRenderer {
     }
 
     private onBestDivination() {
-        this.bestdivination = new BestDivination()
-        this.addChild(this.bestdivination)
+        Http.get(this, API.ApiDivinationBest).then(res => {
+            // unknown转any
+            var rsp: any = res
+
+            this.bestdivination = new BestDivination()
+            this.bestdivination.loadData(rsp)
+            this.addChild(this.bestdivination)
+        })
     }
 
     private onDivinationRank() {
